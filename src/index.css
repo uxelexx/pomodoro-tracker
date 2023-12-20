@@ -10,8 +10,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --background-dark: #13142c;
-  --background-dark-lighter: #2c3447;
+  --background-main: #141832;
+  --background-dark: #121733;
+  --background-dark-lighter: #292d52;
   --background-white: #fefeff;
   --background-light: #eff0fa;
 
@@ -25,6 +26,8 @@
   --gun-powder: #484b64;
   --river-bed: #4c5467;
   --waterloo-: #84849c;
+  --timer-size: 23rem;
+  --letter-spacing: 0.9rem;
 }
 
 a {
@@ -37,7 +40,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--background-dark);
+  background-color: var(--background-dark-lighter);
 }
 
 h1 {
