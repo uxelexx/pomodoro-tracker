@@ -1,4 +1,4 @@
-import { DASHOFFSET, DASHSTROKE } from '@/constants'
+import { DASHOFFSET, DASHSTROKE } from '@/utils/constants'
 
 export function formatTime(time: number) {
   const minutes = Math.floor(time / 60)

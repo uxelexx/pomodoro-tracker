@@ -23,9 +23,8 @@
     /* Path alias */
     "baseUrl": "./",
     "paths": {
-      "@/utils": ["utils"],
-      "@/components": ["components"],
-      "@/constants": ["utils/constants"]
+      "@/utils/*": ["./utils/*"],
+      "@/components/*": ["./components/*"]
     }
   },
   "include": ["src"],

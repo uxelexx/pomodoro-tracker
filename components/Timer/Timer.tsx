@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState, useMemo } from 'react'
-import styles from './Timer.module.css'
+import { calcTick, formatTime } from '@/utils/index'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Progress } from '../Progress'
-import { formatTime, calcTick } from '@/utils'
+import styles from './Timer.module.css'
 
 type PomodoroProps = {
   seconds: number

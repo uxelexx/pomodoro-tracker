@@ -1,6 +1,6 @@
 import styles from './Progress.module.css'
 
-import { DASHSTROKE, RADIUS } from '@/constants'
+import { DASHSTROKE, RADIUS } from '@/utils/constants'
 
 type ProgressProps = {
   dashOffset: number
