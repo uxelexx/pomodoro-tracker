@@ -29,6 +29,7 @@
 
   --timer-size: 23rem;
   --letter-spacing: 0.9rem;
+  --dash-offset: 260;
 }
 
 a {
