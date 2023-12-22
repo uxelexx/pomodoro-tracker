@@ -1,0 +1,18 @@
+.svg {
+  --timer-time: 5s;
+
+  position: absolute;
+  width: var(--timer-size);
+  height: var(--timer-size);
+}
+
+.svg circle {
+  fill: none;
+  stroke-miterlimit: 0;
+  stroke: var(--accent-red);
+  stroke-linecap: round;
+  stroke-width: 3px;
+  transform: rotate(90deg) rotateY(180deg);
+  transform-origin: center;
+  transition: all 0.2s ease-in;
+}
