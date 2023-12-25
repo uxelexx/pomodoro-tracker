@@ -1,4 +1,4 @@
-import { type InputHTMLAttributes, useRef } from 'react'
+import { useRef, type ChangeEvent, type InputHTMLAttributes } from 'react'
 
 import styles from './Input.module.css'
 
@@ -14,7 +14,7 @@ export function Input({ label, ...props }: InputProps) {
     if (inputRef.current) {
       const event = {
         target: inputRef.current,
-      }
+      } as ChangeEvent<HTMLInputElement>
       onChange?.(event)
     }
   }
