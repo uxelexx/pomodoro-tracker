@@ -1,7 +1,7 @@
 import type { Colors, Durations, Fonts, Timer } from '@/types'
+import { getAccentColor } from '@/utils'
 import React, { createContext, useContext, useEffect } from 'react'
 import { useImmer } from 'use-immer'
-import { getAccentColor } from '../utils'
 
 type InitialCtxState = {
   durations: Durations
