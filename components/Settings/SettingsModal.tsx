@@ -1,6 +1,6 @@
 import styles from './Settings.module.css'
 
-import { Input } from '@/components/Inupt'
+import { Input } from '@/components/Input'
 import { RadioButton } from '@/components/RadioButton'
 import { colors } from '@/constants'
 import { usePomodoro } from '@/context/timerContext'
