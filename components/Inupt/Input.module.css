@@ -1,4 +1,18 @@
-input {
+.container {
+  font-weight: bold;
+  font-size: 0.8rem;
+  gap: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.container label {
+  color: lightgrey;
+}
+
+.input {
   border-radius: 0.5rem;
   color: var(--background-main);
   padding: 1rem;
@@ -15,9 +29,10 @@ input {
   padding: 3px;
   transform: rotate(90deg);
   right: 1rem;
+  color: lightgrey;
 }
 
-button:active {
+.input-container button:active {
   transform: rotate(90deg);
   color: var(--background-main);
 }
@@ -33,15 +48,4 @@ button:active {
 input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; /* Removes the default margin */
-}
-
-label {
-  font-weight: bold;
-  font-size: 0.8rem;
-  color: lightgrey;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 3px;
-  position: relative;
 }
