@@ -1,41 +1,63 @@
-# React + TypeScript + Vite
+# Pomodoro Tracker
 
-# TODO
+Pomodoro Tracker is a productivity application that utilizes the Pomodoro Technique to help users manage their time effectively.
 
-- [ ] Pomodoro tracking
-      after 25 minutes short pause for 3-5 minutes
-      after 100 minutes long pause for 15-30 minutes
-      you can pause and resume timer
-- [ ] Modal window
-      You can set working, pause time
-      You can font style
-      You can choose color style
+![Pomodoro Tracker](D:\desk\pomodoro-app.gif)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Learned](#learned)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Introduction
 
-## Expanding the ESLint configuration
+The Pomodoro Tracker is a simple and intuitive tool designed to improve your productivity by breaking your work into intervals, traditionally 25 minutes in length, separated by short breaks.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Pomodoro Timer**: Set the timer for your work sessions.
+- **Customizable Durations**: Adjust the durations for Pomodoro sessions, short breaks, and long breaks.
+- **Color Customization**: Choose your preferred color theme to create a personalized workspace.
+- **Pause and Resume**: Pause and resume your Pomodoro sessions.
+- **Settings**: Configure and customize your Pomodoro settings.
+- **Acessibility**: Fully accessible with keyboard.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Learned
+
+- **Modal Focus Trapping**: The modal focus trapping feature allows users to easily navigate between modal elements without losing focus.
+- **Responsive Design**: App designed to be responsive and accessible across different screen sizes.
+- **Accessibility**: Pomodoro is fully accessible with keyboard navigation.
+
+## Technologies Used
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Css Modules](https://www.npmjs.com/package/css-modules)
+- [Vite](https://vitejs.dev/)
+- [Immer](https://immerjs.github.io/immer/)
+
+## Installation
+
+1. Clone the repository
+2. Install dependencies (node -v 20.10.0)
+
+```bash
+pnpm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+
+1. Start the development server
+
+```bash
+pnpm dev
+```
+
+2. Open the browser and navigate to http://localhost:{your-port}
+3. Customize Pomodoro settings, start the timer, and boost your productivity!
+
+> NOTE: If you want to change durations or colors open `utils\constants.ts` and change values there. (Do not forget to change types too).
