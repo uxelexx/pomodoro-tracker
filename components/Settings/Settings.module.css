@@ -12,6 +12,7 @@
   width: var(--icon-size);
   height: var(--icon-size);
   transition: transform 0.13s linear;
+  border-radius: 50%;
 }
 
 .settings:hover {
