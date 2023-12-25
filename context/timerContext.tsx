@@ -1,63 +1,70 @@
-import React, { createContext, useContext } from 'react'
+import type { Colors, Durations, Fonts, Timer } from '@/types'
+import React, { createContext, useContext, useEffect } from 'react'
 import { useImmer } from 'use-immer'
+import { getAccentColor } from '../utils'
 
-type Timer = 'pomodoro' | 'short-break' | 'long-break'
-
-type ColorsHex = '#f77272' | '#70f2f7' | '#d980f8'
-type Colors = 'red' | 'blue' | 'purple'
-
-type Fonts = string
-
-type Durations = Record<Timer, number>
-
-type InitialState = {
-  color: ColorsHex
-  font: Fonts
+type InitialCtxState = {
   durations: Durations
+  font: Fonts
+  activeColor: Colors
 }
 
-type ContextProps = InitialState & {
+type CtxActions = {
   changeFont: (font: Fonts) => void
   changeColor: (color: Colors) => void
+  changeDurations: (type: Timer, time: number) => void
 }
 
-const colors: Record<Colors, ColorsHex> = {
-  red: '#f77272',
-  blue: '#70f2f7',
-  purple: '#d980f8',
-}
+type ContextProps = InitialCtxState & CtxActions
 
-const initialState: InitialState = {
-  color: colors.purple,
-  font: 'defaultFont',
+const initialState: InitialCtxState = {
   durations: {
-    pomodoro: 25 * 60, // 25 minutes in seconds
-    'short-break': 5 * 60, // 5 minutes in seconds
-    'long-break': 15 * 60, // 15 minutes in seconds
+    pomodoro: 20,
+    shortBreak: 5,
+    longBreak: 15,
   },
+  font: 'defaultFont',
+  activeColor: 'red',
 }
 
 const PomodoroContext = createContext<ContextProps>({} as ContextProps)
 
 export function PomodoroProvider({ children }: { children: React.ReactNode }) {
-  const [value, setValue] = useImmer<InitialState>(initialState)
+  const [state, setState] = useImmer<InitialCtxState>(initialState)
 
   function changeFont(font: Fonts) {
-    setValue(draft => {
+    setState(draft => {
       draft.font = font
     })
   }
 
-  function changeColor(color: Colors) {
-    setValue(draft => {
-      draft.color = colors[color]
+  function changeDurations(type: Timer, time: number) {
+    setState(draft => {
+      draft.durations[type] = time
     })
   }
 
+  function changeColor(color: Colors) {
+    setState(draft => {
+      draft.activeColor = color
+    })
+  }
+
+  useEffect(() => {
+    function changeAccentColor(color: Colors) {
+      document.documentElement.style.setProperty(
+        '--accent',
+        getAccentColor(color)
+      )
+    }
+    changeAccentColor(state.activeColor)
+  }, [state.activeColor])
+
   const contextValues = {
-    ...value,
+    ...state,
     changeFont,
     changeColor,
+    changeDurations,
   }
 
   return (
@@ -67,5 +74,5 @@ export function PomodoroProvider({ children }: { children: React.ReactNode }) {
   )
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
+//eslint-disable-next-line react-refresh/only-export-components
 export const usePomodoro = () => useContext(PomodoroContext)
