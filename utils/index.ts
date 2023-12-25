@@ -1,4 +1,3 @@
-import { DASHOFFSET, DASHSTROKE } from '@/utils/constants'
 import type { Colors } from '@/types'
 import { DASHOFFSET, DASHSTROKE, colors } from '@/constants'
 
@@ -19,4 +18,7 @@ export function getKeys<T extends object>(obj: T) {
 }
 export function getEntries<T extends object>(obj: T) {
   return Object.entries(obj) as [keyof T, T[keyof T]][]
+}
+export function getAccentColor(color: Colors) {
+  return colors[color]
 }
