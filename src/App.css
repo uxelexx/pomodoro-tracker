@@ -4,3 +4,53 @@
   padding: 2rem;
   text-align: center;
 }
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--background-light);
+  margin-bottom: 2rem;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-dark-lighter);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 550px) {
+  #root {
+    padding: 0;
+  }
+}
