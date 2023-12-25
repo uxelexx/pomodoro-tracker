@@ -1,4 +1,6 @@
 import { DASHOFFSET, DASHSTROKE } from '@/utils/constants'
+import type { Colors } from '@/types'
+import { DASHOFFSET, DASHSTROKE, colors } from '@/constants'
 
 export function formatTime(time: number) {
   const minutes = Math.floor(time / 60)
@@ -11,4 +13,7 @@ export function formatTime(time: number) {
 
 export function calcTick(seconds: number) {
   return (DASHSTROKE - DASHOFFSET) / seconds
+}
+export function getKeys<T extends object>(obj: T) {
+  return Object.keys(obj) as (keyof T)[]
 }
