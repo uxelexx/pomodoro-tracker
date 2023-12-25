@@ -20,7 +20,11 @@ export function Settings() {
       <Modal isOpen={isOpen} onClose={handleCloseSetting}>
         <SettingsModal closeModal={handleCloseSetting} />
       </Modal>
-      <button className={styles.settings} onClick={handleOpenSettings}>
+      <button
+        aria-label="Settings"
+        className={styles.settings}
+        onClick={handleOpenSettings}
+      >
         <SettingsIcon />
       </button>
     </>
