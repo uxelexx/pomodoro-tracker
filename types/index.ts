@@ -1,4 +1,4 @@
-export type ColorsHex = '#f77272' | '#70f2f7' | '#d980f8'
+export type ColorsHex = '#f77272' | '#6488ea' | '#d980f8'
 export type Colors = 'red' | 'blue' | 'purple'
 
 export type Fonts = string

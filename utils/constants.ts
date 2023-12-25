@@ -6,6 +6,6 @@ export const DASHSTROKE = 360
 
 export const colors: Record<Colors, ColorsHex> = {
   red: '#f77272',
-  blue: '#70f2f7',
+  blue: '#6488ea',
   purple: '#d980f8',
 }
