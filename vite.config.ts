@@ -11,6 +11,7 @@ export default defineConfig({
       '@/components': path.resolve(__dirname, './components'),
       '@/constants': path.resolve(__dirname, './utils/constants.ts'),
       '@/context': path.resolve(__dirname, './context'),
+      '@/types': path.resolve(__dirname, './types'),
     },
   },
 })
