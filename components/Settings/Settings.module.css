@@ -46,20 +46,6 @@
   gap: 2rem;
 }
 
-.durations label {
-  font-weight: bold;
-  font-size: 0.8rem;
-  color: lightgrey;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 3px;
-}
-
-.durations input {
-  padding: 1rem;
-  font-weight: bold;
-}
 
 .durations div {
   display: flex;
