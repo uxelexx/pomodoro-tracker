@@ -23,6 +23,11 @@
   position: relative;
 }
 
+.input-container input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .input-container button {
   position: absolute;
   font-size: 1.5rem;
@@ -43,9 +48,4 @@
 
 .dec {
   bottom: 0rem;
-}
-
-input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0; /* Removes the default margin */
 }
