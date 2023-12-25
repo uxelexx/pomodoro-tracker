@@ -1,5 +1,47 @@
 input {
   border-radius: 0.5rem;
   color: var(--background-main);
+  padding: 1rem;
   background-color: var(--background-light);
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container button {
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 3px;
+  transform: rotate(90deg);
+  right: 1rem;
+}
+
+button:active {
+  transform: rotate(90deg);
+  color: var(--background-main);
+}
+
+.inc {
+  top: 0rem;
+}
+
+.dec {
+  bottom: 0rem;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Removes the default margin */
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3px;
+  position: relative;
 }
