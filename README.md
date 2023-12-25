@@ -2,7 +2,7 @@
 
 Pomodoro Tracker is a productivity application that utilizes the Pomodoro Technique to help users manage their time effectively.
 
-![pomodoro-app](https://github.com/uxelexx/pomodoro-tracker/assets/101667706/95466b94-c585-4d29-9fca-7710d14ccf4f)
+![pomodoro-app](https://github.com/uxelexx/pomodoro-tracker/assets/101667706/f7c5ae75-0db6-4afe-8433-993a25c3c29f)
 
 ## Table of Contents
 
