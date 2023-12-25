@@ -52,27 +52,18 @@ export function SettingsModal({ closeModal }: SettingProps) {
         <div className={styles.durations}>
           <Input
             label="pomodoro"
-            id="pomodoro"
             onChange={handleChangeInput}
             value={inputs.pomodoro}
-            max={60}
-            min={20}
           />
           <Input
-            label="short break"
-            id="shortBreak"
+            label="short-break"
             onChange={handleChangeInput}
-            value={inputs.shortBreak}
-            max={10}
-            min={5}
+            value={inputs['short-break']}
           />
           <Input
-            label="long break"
-            id="longBreak"
+            label="long-break"
             onChange={handleChangeInput}
-            value={inputs.longBreak}
-            max={20}
-            min={15}
+            value={inputs['long-break']}
           />
         </div>
         <div className={styles.hr} />

@@ -1,14 +1,17 @@
-import { useRef, type ChangeEvent, type InputHTMLAttributes } from 'react'
-
 import styles from './Input.module.css'
 
+import type { Timer } from '@/types'
+import { getMinMaxTime } from '@/utils'
+import { useRef, type ChangeEvent, type InputHTMLAttributes } from 'react'
+
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
-  label: string
+  label: Timer
 }
 
 export function Input({ label, ...props }: InputProps) {
   const inputRef = useRef<HTMLInputElement>(null)
-  const { id, onChange } = props
+  const { onChange } = props
+  const { max, min } = getMinMaxTime(label)
 
   function handleChange() {
     if (inputRef.current) {
@@ -34,7 +37,7 @@ export function Input({ label, ...props }: InputProps) {
   }
   return (
     <div className={styles.container}>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={label}>{label.replace('-', ' ')}</label>
       <div className={styles['input-container']}>
         <button
           tabIndex={-1}
@@ -48,9 +51,11 @@ export function Input({ label, ...props }: InputProps) {
           {...props}
           className={styles.input}
           ref={inputRef}
-          id={id}
+          id={label}
           type="number"
           step={1}
+          max={max}
+          min={min}
         />
         <button
           tabIndex={-1}
