@@ -32,8 +32,8 @@ export function Input({ label, ...props }: InputProps) {
     }
   }
   return (
-    <label htmlFor={props.id}>
-      {label}
+    <div className={styles.container}>
+      <label htmlFor={props.id}>{label}</label>
       <div className={styles['input-container']}>
         <button
           tabIndex={-1}
@@ -43,7 +43,14 @@ export function Input({ label, ...props }: InputProps) {
         >
           &#8249;
         </button>
-        <input ref={inputRef} {...props} id={props.id} type="number" step={1} />
+        <input
+          className={styles.input}
+          ref={inputRef}
+          {...props}
+          id={props.id}
+          type="number"
+          step={1}
+        />
         <button
           tabIndex={-1}
           className={styles.dec}
@@ -53,6 +60,6 @@ export function Input({ label, ...props }: InputProps) {
           &#8250;
         </button>
       </div>
-    </label>
+    </div>
   )
 }
