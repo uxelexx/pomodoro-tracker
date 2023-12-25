@@ -1,0 +1,33 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.buttons {
+  background-color: var(--background-dark);
+  color: var(--background-dark);
+  border-radius: 5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-grow: 1;
+  gap: 1rem;
+  z-index: 5;
+}
+
+.buttons button {
+  color: var(--waterloo);
+  border-radius: inherit;
+  font-size: 0.9rem;
+  padding: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.buttons .active {
+  background-color: var(--accent);
+  color: var(--background-dark);
+}
