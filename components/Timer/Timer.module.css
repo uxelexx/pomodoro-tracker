@@ -34,14 +34,8 @@
 }
 
 .timer {
-  font-size: 5.5rem;
+  font-size: min(20vw, 5.5rem);
   color: inherit;
-}
-
-@media (max-width: 768px) {
-  .timer {
-    font-size: 5em;
-  }
 }
 
 .pause {
@@ -54,6 +48,5 @@
   border-radius: 5rem;
   letter-spacing: calc(var(--letter-spacing) * 3);
   margin-right: calc(var(--letter-spacing) * -3);
-  transform: translateY(1rem);
   z-index: 5;
 }
