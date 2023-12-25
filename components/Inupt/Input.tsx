@@ -8,13 +8,14 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 
 export function Input({ label, ...props }: InputProps) {
   const inputRef = useRef<HTMLInputElement>(null)
+  const { id, onChange } = props
 
   function handleChange() {
     if (inputRef.current) {
       const event = {
         target: inputRef.current,
       }
-      props.onChange?.(event)
+      onChange?.(event)
     }
   }
 
@@ -33,7 +34,7 @@ export function Input({ label, ...props }: InputProps) {
   }
   return (
     <div className={styles.container}>
-      <label htmlFor={props.id}>{label}</label>
+      <label htmlFor={id}>{label}</label>
       <div className={styles['input-container']}>
         <button
           tabIndex={-1}
@@ -44,10 +45,10 @@ export function Input({ label, ...props }: InputProps) {
           &#8249;
         </button>
         <input
+          {...props}
           className={styles.input}
           ref={inputRef}
-          {...props}
-          id={props.id}
+          id={id}
           type="number"
           step={1}
         />
