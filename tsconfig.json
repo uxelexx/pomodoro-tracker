@@ -23,12 +23,14 @@
     /* Path alias */
     "baseUrl": "./",
     "paths": {
-      "@/utils/*": ["utils/*"],
+      "@/utils": ["utils"],
       "@/components/*": ["components/*"],
       "@/context/*": ["context/*"],
+      "@/types": ["types"],
       "@/constants": ["utils/constants"]
     }
   },
-  "include": ["src"],
+  "include": ["./"],
+  "exclude": ["node_modules", "dist", ".yalc", "build", "public", "scripts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
