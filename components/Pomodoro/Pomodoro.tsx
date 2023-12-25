@@ -1,9 +1,9 @@
+import styles from './Pomodoro.module.css'
+
 import { usePomodoro } from '@/context/timerContext'
 import type { Timer } from '@/types'
-import { type MouseEvent, useState } from 'react'
+import { useState, type MouseEvent } from 'react'
 import { Timer as PomodoroTimer } from '../Timer'
-
-import styles from './Pomodoro.module.css'
 
 export function Pomodoro() {
   const { durations } = usePomodoro()
