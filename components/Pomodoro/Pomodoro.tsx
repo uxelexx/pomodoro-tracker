@@ -26,10 +26,10 @@ export function Pomodoro() {
         <button className={activeClass('pomodoro')} value="pomodoro">
           Pomodoro
         </button>
-        <button className={activeClass('shortBreak')} value="shortBreak">
+        <button className={activeClass('short-break')} value="short-break">
           Short break
         </button>
-        <button className={activeClass('longBreak')} value="longBreak">
+        <button className={activeClass('long-break')} value="long-break">
           Long break
         </button>
       </div>
