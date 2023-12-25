@@ -1,5 +1,5 @@
-import type { Colors } from '@/types'
-import { DASHOFFSET, DASHSTROKE, colors } from '@/constants'
+import { DASHOFFSET, DASHSTROKE, colors, maxMinTime } from '@/constants'
+import type { Colors, Timer } from '@/types'
 
 export function formatTime(time: number) {
   const minutes = Math.floor(time / 60)
@@ -24,4 +24,8 @@ export function getEntries<T extends object>(obj: T) {
 
 export function getAccentColor(color: Colors) {
   return colors[color]
+}
+
+export function getMinMaxTime(type: Timer) {
+  return maxMinTime[type]
 }
