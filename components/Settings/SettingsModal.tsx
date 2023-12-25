@@ -18,7 +18,11 @@ export function SettingsModal({ closeModal }: SettingProps) {
   const [selectedColor, setSelectedColor] = useState<Colors>(activeColor)
 
   function handleChangeInput(e: ChangeEvent<HTMLInputElement>) {
-    setInputs({ ...inputs, [e.target.id]: Number(e.target.value) })
+    const { id, value } = e.target
+    setInputs(prevInputs => ({
+      ...prevInputs,
+      [id]: Number(value),
+    }))
   }
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -49,7 +53,6 @@ export function SettingsModal({ closeModal }: SettingProps) {
           <Input
             label="pomodoro"
             id="pomodoro"
-            type="number"
             onChange={handleChangeInput}
             value={inputs.pomodoro}
             max={60}
@@ -58,7 +61,6 @@ export function SettingsModal({ closeModal }: SettingProps) {
           <Input
             label="short break"
             id="shortBreak"
-            type="number"
             onChange={handleChangeInput}
             value={inputs.shortBreak}
             max={10}
@@ -67,7 +69,6 @@ export function SettingsModal({ closeModal }: SettingProps) {
           <Input
             label="long break"
             id="longBreak"
-            type="number"
             onChange={handleChangeInput}
             value={inputs.longBreak}
             max={20}
