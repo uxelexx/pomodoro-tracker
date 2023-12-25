@@ -35,7 +35,6 @@
 
 .timer {
   font-size: 5.5rem;
-  margin: 0;
   color: inherit;
 }
 
@@ -53,7 +52,8 @@
   color: inherit;
   text-transform: uppercase;
   border-radius: 5rem;
-  letter-spacing: var(--letter-spacing);
-  margin-right: calc(var(--letter-spacing) * -1);
+  letter-spacing: calc(var(--letter-spacing) * 3);
+  margin-right: calc(var(--letter-spacing) * -3);
+  transform: translateY(1rem);
   z-index: 5;
 }
