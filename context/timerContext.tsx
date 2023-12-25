@@ -1,5 +1,5 @@
 import type { Colors, Durations, Fonts, Timer } from '@/types'
-import { getAccentColor } from '@/utils'
+import { getAccentColor, getMinMaxTime } from '@/utils'
 import React, { createContext, useContext, useEffect } from 'react'
 import { useImmer } from 'use-immer'
 
@@ -19,9 +19,9 @@ type ContextProps = InitialCtxState & CtxActions
 
 const initialState: InitialCtxState = {
   durations: {
-    pomodoro: 20,
-    shortBreak: 5,
-    longBreak: 15,
+    pomodoro: getMinMaxTime('pomodoro').min,
+    'short-break': getMinMaxTime('short-break').min,
+    'long-break': getMinMaxTime('long-break').min,
   },
   font: 'defaultFont',
   activeColor: 'red',
