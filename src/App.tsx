@@ -6,7 +6,7 @@ import { PomodoroProvider } from '@/context/timerContext'
 function App() {
   return (
     <>
-      <h2>pomodoro</h2>
+      <h1>pomodoro</h1>
       <PomodoroProvider>
         <Pomodoro />
         <Settings />
