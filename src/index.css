@@ -9,7 +9,7 @@
   --timer-light: #d7e0ff;
   --waterloo: #84849c;
 
-  --timer-size: 27rem;
+  --timer-size: min(90vw, 27rem);
   --letter-spacing: 0.25rem;
 
   font-family:
