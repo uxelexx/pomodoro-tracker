@@ -3,6 +3,8 @@ import { getAccentColor, getMinMaxTime } from '@/utils'
 import React, { createContext, useContext, useEffect } from 'react'
 import { useImmer } from 'use-immer'
 
+// some new feature
+
 type InitialCtxState = {
   durations: Durations
   font: Fonts
